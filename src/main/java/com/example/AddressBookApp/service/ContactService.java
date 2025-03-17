@@ -52,5 +52,5 @@ public class ContactService {
             return true;
         }
         return false;
-    }
+}
 }

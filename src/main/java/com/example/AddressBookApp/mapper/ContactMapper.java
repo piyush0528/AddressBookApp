@@ -23,5 +23,5 @@ public class ContactMapper {
         contact.setEmail(contactDTO.getEmail());
         contact.setPhone(contactDTO.getPhone());
         return contact;
-    }
+}
 }
