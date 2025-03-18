@@ -3,12 +3,14 @@ import com.example.AddressBookApp.dto.ContactDTO;
 import com.example.AddressBookApp.service.ContactService;
 import com.example.AddressBookApp.model.Contact;
 import com.example.AddressBookApp.repository.ContactRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
 
+@Slf4j
 @RestController
 @RequestMapping("/api/contacts")
 public class ContactController {
@@ -47,5 +49,5 @@ public class ContactController {
     public ResponseEntity<Void> deleteContact(@PathVariable Long id) {
         boolean isDeleted = contactService.deleteContact(id);
         return isDeleted ? ResponseEntity.noContent().build() : ResponseEntity.notFound().build();
-}
+    }
 }

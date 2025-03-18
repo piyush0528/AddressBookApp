@@ -4,11 +4,13 @@ import com.example.AddressBookApp.dto.ContactDTO;
 import com.example.AddressBookApp.model.Contact;
 import com.example.AddressBookApp.repository.ContactRepository;
 import com.example.AddressBookApp.mapper.ContactMapper;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+@Slf4j
 @Service
 public class ContactService {
 
@@ -52,5 +54,5 @@ public class ContactService {
             return true;
         }
         return false;
-}
+    }
 }
